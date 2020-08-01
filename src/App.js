@@ -4,13 +4,14 @@ import {
   Switch,
   Route,
   Link,
-  Redirect
+  Redirect,
 } from 'react-router-dom'
 
 import Home from './pages/home/home.component'
 import Posts from './pages/posts/posts.component'
 import PostDetail from './pages/post-detail/post-detail.component'
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-adn-sign-up.component'
+import Chat from './pages/chat/chat.component'
 
 const isAuthenticated = true
 
@@ -23,10 +24,11 @@ const App = () => {
         <div>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/signin">SingIn</Link></li>
+            <li><Link to="/signin">SignIn</Link></li>
             <li><Link to="/posts">Posts</Link></li>
             <li><Link to="/posts/1">Posts > 1</Link></li>
             <li><Link to="/posts/2">Posts > 2</Link></li>
+            <li><Link to="/chat">Chat</Link></li>
           </ul>
 
           <hr/>
@@ -38,6 +40,7 @@ const App = () => {
             }/>
             <PrivateRoute exact path="/posts" component={Posts}/>
             <PrivateRoute exact path="/posts/:id" component={PostDetail}/>
+            <Route exact path="/chat" component={Chat}/>
           </Switch>
 
         </div>
