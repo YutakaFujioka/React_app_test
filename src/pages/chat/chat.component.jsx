@@ -1,24 +1,7 @@
 import io from "socket.io-client";
 import React from 'react';
 
-/*
-const Chat = props => (
 
-  this.socket = io('localhost:8080');
-
-  this.sendMessage = ev => {
-    ev.preventDefault();
-    this.socket.emit('SEND_MESSAGE',{
-      // json形式で送信するメッセージを記述
-    });
-  }
-
-  this.socket.on('RECEIVE_MESSAGE',fuction(data){
-    // メッセージ受信時に実行したことを記述
-  });
-)
-
-*/
 
 class Chat extends React.Component{
   constructor(props){
