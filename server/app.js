@@ -7,6 +7,8 @@ server = app.listen(process.env.PORT || 8080,function(){
   console.log('server is running on port 5000')
 });
 
+app.use(express.static(__dirname + '/'));
+
 io = socket(server);
 
 io.on('connection',(socket) => {
