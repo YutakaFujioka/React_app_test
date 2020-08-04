@@ -15,7 +15,7 @@ class Chat extends React.Component{
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
-    this.socket = io('localhost:8080');
+    this.socket = io('https://sheltered-headland-83301.herokuapp.com');
 
     this.sendMessage = ev => {
       ev.preventDefault();
@@ -41,7 +41,7 @@ class Chat extends React.Component{
   }
 
   handleSubmit(event) {
-    //alert('A Name was submitted: ' + this.state.value);
+    alert('A Name was submitted: ' + this.state.value);
     this.sendMessage(event);
     event.preventDefault();
   }
