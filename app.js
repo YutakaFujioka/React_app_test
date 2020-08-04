@@ -3,12 +3,14 @@ var socket = require('socket.io');
 
 var app = express();
 
+app.use(express.static(__dirname + '/src'));
+
 server = app.listen(process.env.PORT || 8080,function(){
   console.log('server is running on port 5000')
   console.log(__dirname)
 });
-app.use(express.static('/'));
-app.use(express.static('/src'));
+
+
 
 io = socket(server);
 
