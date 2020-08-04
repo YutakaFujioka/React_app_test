@@ -8,7 +8,7 @@ server = app.listen(process.env.PORT || 8080,function(){
   console.log(__dirname)
 });
 
-app.use(express.static(__dirname + '../src'));
+app.use(express.static('/src'));
 
 io = socket(server);
 
